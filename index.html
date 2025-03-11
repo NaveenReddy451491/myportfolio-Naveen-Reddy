@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naveen Reddy Gunda - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+  <style>
+    /* Fade-In Animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Bouncing Animation */
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Pulse Animation */
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Glowing Animation */
+    .glow {
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px #3B82F6, 0 0 20px #3B82F6, 0 0 30px #3B82F6;
+      }
+      to {
+        box-shadow: 0 0 20px #3B82F6, 0 0 30px #3B82F6, 0 0 40px #3B82F6;
+      }
+    }
+
+    /* Gradient Background */
+    .gradient-bg {
+      background: linear-gradient(135deg, #6EE7B7, #3B82F6);
+    }
+
+    /* Hover Effects */
+    .hover-grow {
+      transition: transform 0.3s ease;
+    }
+
+    .hover-grow:hover {
+      transform: scale(1.05);
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Skill Bars */
+    .skill-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #E5E7EB;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background-color: #3B82F6;
+      border-radius: 10px;
+      animation: fillBar 2s ease-in-out forwards;
+    }
+
+    @keyframes fillBar {
+      from {
+        width: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50 fade-in">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-2xl font-bold gradient-text bg-gradient-to-r from-blue-600 to-green-400 bg-clip-text text-transparent">
+        Naveen Reddy Gunda
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+          <li><a href="#social-links" class="hover:text-blue-500">Social Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center fade-in">
+      <h1 class="text-5xl font-bold mb-4 text-white">👋 Hey, I’m <span class="text-yellow-300">Naveen Reddy Gunda</span></h1>
+      <p class="text-xl text-gray-200">
+        Data Science Student 🎓 | Machine Learning & Python Enthusiast 🤖 <br>
+        Open to internships & part-time gigs 💼 <br>
+        Let's connect... <span id="typed" class="text-yellow-300"></span>
+      </p>
+      <!-- Interactive Button -->
+      <div class="mt-8">
+              <a href="#" target="_blank" class="inline-block px-8 py-3 bg-yellow-400 text-white font-semibold rounded-lg hover:bg-yellow-500 transition duration-300 hover-grow hover-glow">
+        Download Resume
+      </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="min-h-screen flex items-center justify-center bg-white">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 gradient-text bg-gradient-to-r from-blue-600 to-green-400 bg-clip-text text-transparent">
+        Skills
+      </h2>
+      <div class="grid grid-cols-2 gap-8">
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Programming Languages</h3>
+          <p>Python, C</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Concepts</h3>
+          <p>Machine Learning, Deep Learning, NLP</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Frameworks</h3>
+          <p>TensorFlow, NLTK, Pandas</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Databases</h3>
+          <p>MySQL, MongoDB</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Skills Section -->
+  <section id="professional-skills" class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 text-white">Professional Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8">
+        <!-- Skill 1: Machine Learning -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Machine Learning</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 2: Data Analysis -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Data Analysis</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 3: Python Programming -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Python Programming</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 4: Natural Language Processing (NLP) -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Natural Language Processing</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 5: Deep Learning -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Deep Learning</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 6: Problem Solving -->
+        <div class="bg-white p-6 rounded-lg hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Problem Solving</h3>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="min-h-screen flex items-center justify-center bg-white py-16">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 gradient-text bg-gradient-to-r from-blue-600 to-green-400 bg-clip-text text-transparent">
+        Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8">
+        <!-- Project 1: AI Corrector -->
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">AI Corrector</h3>
+          <p class="text-gray-700"><strong>Technology Used:</strong> Python, NLP, NLTK, Sentence Transformers</p>
+          <p class="text-gray-600 mt-2">An AI-based exam evaluator that automates grading using semantic similarity, sentiment analysis, and grammar checks.</p>
+        </div>
+
+        <!-- Project 2: Language Detection and Translation -->
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Language Detection and Translation</h3>
+          <p class="text-gray-700"><strong>Technology Used:</strong> Python, NLP, gTTS</p>
+          <p class="text-gray-600 mt-2">A multilingual system for Indian languages that detects, translates, and performs sentiment analysis.</p>
+        </div>
+
+        <!-- Project 3: Health Score Prediction -->
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Health Score Prediction</h3>
+          <p class="text-gray-700"><strong>Technology Used:</strong> Python, Machine Learning, Pandas</p>
+          <p class="text-gray-600 mt-2">A predictive model that calculates a health score based on individual health parameters.</p>
+        </div>
+
+        <!-- Project 4: Paddy Disease Detection -->
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Paddy Disease Detection</h3>
+          <p class="text-gray-700"><strong>Technology Used:</strong> Python, Vision Transformers, Data Augmentation</p>
+          <p class="text-gray-600 mt-2">A model to detect diseases in paddy crops using advanced deep learning techniques.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 text-white">About Me</h2>
+      <div class="bg-white p-6 rounded-lg max-w-2xl mx-auto hover-grow">
+        <p class="text-gray-700">Data Science Student</p>
+        <p class="text-gray-600">Passionate about leveraging data to solve real-world problems. Committed to continuous learning and growth in the field of data science and machine learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen flex items-center justify-center bg-white">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 gradient-text bg-gradient-to-r from-blue-600 to-green-400 bg-clip-text text-transparent">
+        Contact
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Phone</h3>
+          <p>+91 9866740983</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Email</h3>
+          <p>22215a6704@bvrit.ac.in</p>
+        </div>
+        <div class="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg bounce hover-grow">
+          <h3 class="text-2xl font-bold mb-4">Address</h3>
+          <p>Telangana, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Links Banner -->
+  <section id="social-links" class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center fade-in">
+      <h2 class="text-4xl font-bold mb-8 text-white">Social Links</h2>
+      <div class="mt-8 flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/gunda-naveen-reddy-06547925b/" target="_blank" class="text-gray-200 hover:text-blue-400 bounce">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-12 h-12">
+        </a>
+        <a href="https://github.com/NaveenReddy451491" target="_blank" class="text-gray-200 hover:text-gray-900 bounce">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-12 h-12">
+        </a>
+        <a href="mailto:22215a6704@bvrit.ac.in" class="text-gray-200 hover:text-red-400 bounce">
+          <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Gmail" class="w-12 h-12">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Naveen Reddy Gunda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Typed.js Script -->
+  <script>
+    var typed = new Typed('#typed', {
+      strings: ['Data Scientist', 'Machine Learning Enthusiast', 'Content Writer'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+</body>
+</html>
